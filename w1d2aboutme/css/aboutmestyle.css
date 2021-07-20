@@ -25,7 +25,7 @@ ul, ol, p, h1, h2, h3, h4, h5, h6{
 
 
 /* main body section css ******************************************************************************** */
-    section{
+    .section{
         padding: 1%; background-color: #d2f6f6; justify-content:space-between;
     }
     .course-list{
