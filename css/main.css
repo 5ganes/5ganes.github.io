@@ -11,7 +11,7 @@ ul, p, h1, h2, h3, h4, h5, h6{
 
 /* header css **************************************************************************** */
     header{
-        background-repeat: no-repeat; background-size: cover cover;
+        background-repeat: no-repeat; background-size: cover;
         background-image: url('../images/lake_back.png');
         display: flex; padding: 3.5%;
     }
@@ -25,9 +25,9 @@ ul, p, h1, h2, h3, h4, h5, h6{
         width: 88%; font-size: 27px; color: wheat; font-weight: bold; 
     }
     /* responsive media queries for header ******************************************** */
-    @media screen and (max-width : 600px 600px) { 
+    @media screen and (max-width : 600px) { 
         header{
-            flex-direction: column column;
+            flex-direction: column;
         }
         header .title-image, header .title-content{
             width: 100%; text-align: center;
@@ -41,13 +41,13 @@ ul, p, h1, h2, h3, h4, h5, h6{
 
 /* main body section css ******************************************************************************** */
     section{
-        display: flex flex; padding: 1%; background-color: #d2f6f6; justify-content:space-between space-between;
+        display: flex; padding: 1%; background-color: #d2f6f6; justify-content:space-between;
     }
     .sidebar{
         width: 22%; padding: 1%; background: #fff; padding-top: 2%;
     }
     .sidebar .sidebar-title{
-        background: blue; padding: 3%; border-radius: 15px 15px 0 0 15px 15px 0 0; color: wheat wheat;
+        background: blue; padding: 3%; border-radius: 15px 15px 0 0; color: wheat;
     }
 
     /* .sidebar ul{
@@ -58,10 +58,10 @@ ul, p, h1, h2, h3, h4, h5, h6{
     }
     .sidebar ul li a{
         display: block; padding: 2% 2% 2%; text-decoration: none; color: #01002a;
-        background: linear-gradient(45deg, lightblue, lightgreen) linear-gradient(45deg, lightblue, lightgreen);
+        background: linear-gradient(45deg, lightblue, lightgreen);
     }
     .sidebar ul li a:hover{
-        background: linear-gradient(45deg, lightgreen, lightblue) linear-gradient(45deg, lightgreen, lightblue);
+        background: linear-gradient(45deg, lightgreen, lightblue);
     }
 
     .main-container{
@@ -78,9 +78,9 @@ ul, p, h1, h2, h3, h4, h5, h6{
     } */
 
     /* responsive media queries for main body section ****************** */
-    @media screen and (max-width : 600px 600px) {
+    @media screen and (max-width : 600px) {
         section{
-            flex-direction: column column;
+            flex-direction: column;
         }
         .sidebar{
             width: 98%; padding: 1%;
@@ -97,7 +97,7 @@ ul, p, h1, h2, h3, h4, h5, h6{
 
 /* footer section css starts ************************************************************************************* */
     footer{
-        background-color: #3676B6; padding: 2%; color: wheat; display: flex flex; justify-content: space-around space-around;
+        background-color: #3676B6; padding: 2%; color: wheat; display: flex; justify-content: space-around;
     }
     footer .validator-block{
         width: 50%;
@@ -106,12 +106,12 @@ ul, p, h1, h2, h3, h4, h5, h6{
         width: 50%; text-align: right;
     }
 
-    @media screen and (max-width : 600px 600px) {
+    @media screen and (max-width : 600px) {
         footer{
-            flex-direction: column column;
+            flex-direction: column;
         }
         footer .validator-block, footer .copyright-block{
             width: 100%; text-align: center;
         }
     }
-/* footer section css ends */
+/* footer section css */
