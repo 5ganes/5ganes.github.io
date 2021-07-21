@@ -65,10 +65,10 @@ ul, ol, p, h1, h2, h3, h4, h5, h6{
         width: 96%; background-color: white; padding: 1%; margin: 1%;
     }
     .fav-movies ol{
-        margin-left: 2%;
+        margin-left: 2%; display: flex; flex-direction: column-reverse;
     }
     .fav-movies ol li{
-        padding: 1%; background: #f2b1b1; margin: 1% 0;
+        padding: 1%; background: #f2b1b1; margin: 0.3% 0;
     }
     .fav-movies ol li a{
         text-decoration: none;
