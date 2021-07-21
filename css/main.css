@@ -25,7 +25,7 @@ ul, p, h1, h2, h3, h4, h5, h6{
         width: 88%; font-size: 27px; color: wheat; font-weight: bold; 
     }
     /* responsive media queries for header ******************************************** */
-    @media screen and (max-width : 600px) { 
+    @media screen and (max-width : 650px) { 
         header{
             flex-direction: column;
         }
@@ -63,6 +63,9 @@ ul, p, h1, h2, h3, h4, h5, h6{
     .sidebar ul li a:hover{
         background: linear-gradient(45deg, lightgreen, lightblue);
     }
+    @media screen and (max-width : 650px) {
+        .sidebar ul li a{ padding: 4% 2% 2%; }
+    }
 
     .main-container{
         width: 73%; padding: 1%; background: #fff;
@@ -78,7 +81,7 @@ ul, p, h1, h2, h3, h4, h5, h6{
     } */
 
     /* responsive media queries for main body section ****************** */
-    @media screen and (max-width : 600px) {
+    @media screen and (max-width : 650px) {
         section{
             flex-direction: column;
         }
@@ -89,8 +92,12 @@ ul, p, h1, h2, h3, h4, h5, h6{
             width: 98%; padding: 1%;
         }
         .main-container .welcome .welcome-title{
-            padding: 3%;;
+            padding: 3%;
         }
+        .main-container .welcome .welcome-content{
+            padding: 3%; line-height: 32px;
+        }
+
     }
 /* main body section css ends ********************************************************************************** */
 
@@ -106,12 +113,12 @@ ul, p, h1, h2, h3, h4, h5, h6{
         width: 50%; text-align: right;
     }
 
-    @media screen and (max-width : 600px) {
+    @media screen and (max-width : 650px) {
         footer{
             flex-direction: column;
         }
         footer .validator-block, footer .copyright-block{
-            width: 100%; text-align: center;
+            width: 96%; text-align: center; margin: 2%;
         }
     }
 /* footer section css */
