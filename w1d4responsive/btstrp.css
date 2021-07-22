@@ -29,10 +29,10 @@ section div:last-child{
         flex-wrap: wrap;
     }
     .section-div div:first-child, .section-div div:last-child{
-        width: 46%; padding: 2%;
+        width: 50%; padding: 2%;
     }
     .section-div div:nth-child(2){
-        width: 96%; order: 3; padding: 2%;
+        width: 100%; order: 3; padding: 2%;
     }
     header{
         padding: 2%;
