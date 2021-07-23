@@ -1,5 +1,9 @@
-header, footer{
+header{
     background-color: #ADD8E6;
+}
+
+footer{
+    background-color: #2F4F4F; color: white;
 }
 
 nav{
@@ -7,10 +11,6 @@ nav{
 }
 nav ul li{
     border-right: 2px solid black;
-}
-
-section{
-    height: 50vh;
 }
 
 section div:first-child{
@@ -23,21 +23,19 @@ section div:last-child{
     background-color: #CCCCCC;
 }
 
+.section-div{
+    height: 50vh;
+}
+
 /* resposive media queries */
 @media screen and ( max-width : 600px ) {
     .section-div{
         flex-wrap: wrap;
     }
     .section-div div:first-child, .section-div div:last-child{
-        width: 50%; padding: 2%;
+        width: 50%;
     }
     .section-div div:nth-child(2){
-        width: 100%; order: 3; padding: 2%;
-    }
-    header{
-        padding: 2%;
-    }
-    footer{
-        padding: 4%;
+        width: 100%; order: 3;
     }
 }
