@@ -86,6 +86,27 @@ function filterLongWords(arrOfStrings, i){
     return retList.toString();
 }
 
+/* problem 8 : multiplyArray takes an array of numbers and a number and returns an array multiplied by number */
+function multiplyArray(array, n){
+    return array.map(function(el, i, arr){
+        return el * n;
+    }).toString();
+}
+
+/* problem 8 : arrayWithNValues takes an array of numbers and a number and returns an array having elements with value i */
+function arrayWithNValues(array, n){
+    return array.filter(function(el, i, arr) {
+        return el === n;
+    }).toString();
+}
+
+/* problem 8 : productOfArrElements takes an array of numbers and returns product of all elements */
+function productOfArrElements(array){
+    return array.reduce(function(preVal, el, i, arr){
+        return preVal * el;
+    });
+}
+
 /* main function to test all the above functions */
 function main(){
 
@@ -96,36 +117,39 @@ function main(){
     // there is a mistake in this test. 55 should be sent to testing function instead of 4, then test will pass
     // console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(4, maxOfThree(55, 4, 44)));
 
-    console.log("Expected output of isVowel('i') is true  " + myFunctionTest(true, isVowel('i')));
-    console.log("Expected output of sum([1, 2, 3, 4]) is 10  " + myFunctionTest(10, sum([1, 2, 3, 4])));
-    console.log("Expected output of product([1, 2, 3, 4]) is 24  " + myFunctionTest(24, multiply([1, 2, 3, 4])));
-    console.log("Expected output of reverse(\"Ganesh\") is \"hsenaG\"  " + myFunctionTest("hsenaG", reverse("Ganesh")));
-    console.log("Expected output of findLongestWord(\"Ganesh\", \"Johnathan\", \"Anthony\") is 9  " + myFunctionTest(9, findLongestWord(["Ganesh", "Johnathan", "Anthony"])));
-    console.log("Expected output of findLongestWords([\"Ganesh\", \"Johnathan\", \"Anthony\"], 6) is \"Johnathan\", \"Anthony\"  " + myFunctionTest('Johnathan,Anthony', filterLongWords(["Ganesh", "Johnathan", "Anthony"], 6)));
-
+    console.log(
+        "Expected output of isVowel('i') is true  " + myFunctionTest(true, isVowel('i'))
+    );
+    console.log(
+        "Expected output of sum([1, 2, 3, 4]) is 10  " + myFunctionTest(10, sum([1, 2, 3, 4]))
+    );
+    console.log(
+        "Expected output of product([1, 2, 3, 4]) is 24  " + myFunctionTest(24, multiply([1, 2, 3, 4]))
+    );
+    console.log(
+        "Expected output of reverse(\"Ganesh\") is \"hsenaG\"  " + myFunctionTest("hsenaG", reverse("Ganesh"))
+    );
     
+    console.log(
+        "Expected output of findLongestWord(\"Ganesh\", \"Johnathan\", \"Anthony\") is 9  " + myFunctionTest(9, findLongestWord(["Ganesh", "Johnathan", "Anthony"]))
+    );
     
-    // problem 8 : solutions ******************************************************
-    const a = [1,3,5,3,3]; 
+    console.log(
+        "Expected output of findLongestWords([\"Ganesh\", \"Johnathan\", \"Anthony\"], 6) is [Johnathan,Anthony]  " + myFunctionTest('Johnathan,Anthony', filterLongWords(["Ganesh", "Johnathan", "Anthony"], 6))
+    );
+
+
+    console.log(
+        "Expected output of multiplyArray([1,3,5,3,3], 10) is [10,30,50,30,30]  " + myFunctionTest('10,30,50,30,30', multiplyArray([1,3,5,3,3], 10))
+    );
     
-    // multiply each element by 10
-    const result = a.map(function(el, i, arr){
-        return el * 10;
-    });
-    console.log("Array after multiplying each element by 3 : " + result);
+    console.log(
+        "Expected output of arrayWithNValues([1,3,5,3,3], 3) is [3,3,3]  " + myFunctionTest('3,3,3', arrayWithNValues([1,3,5,3,3], 3))
+    );
 
-    // eturn array with all elements equal to 3
-    const result1 = a.filter(function(el, i, arr) {
-        return el === 3;
-    });
-    console.log("Array having elements with value 3 : " + result1);
-
-    // return the product of all elements
-    const product = a.reduce(function(preVal, el, i, arr){
-        return preVal * el;
-    });
-    console.log("Product of all elements of array : " + product);
-
+    console.log(
+        "Expected output of productOfArrElements([1,3,5,3,3]) is 135  " + myFunctionTest(135, productOfArrElements([1,3,5,3,3]))
+    );
 
 }
 
