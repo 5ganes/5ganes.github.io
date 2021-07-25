@@ -1,30 +1,22 @@
 window.onload = function() {
-    "use strict"; 
-
-    // actual animation function : using separate function
-    function animationSingle(){
-        if(i == length) 
-        i = 0;
+    'use strict';
+    function animationSingle(){ // actual animation function : using separate function
+        if(i == length)
+            i = 0;
         textArea.innerHTML = animationArray[i++];
     }
-
-    // starting function of animation
-    function startAnimation(){
+    function startAnimation(){ // starting function of animation
         start.disabled = true;
         stop.disabled = false;
         textArea.readOnly = true;
-        
         var animationText = ANIMATIONS[animation.value];
         animationArray = animationText.split("=====\n");
         i = 0;
         length = animationArray.length;
         interval = setInterval(animationSingle, speed);
-
         animation.disabled = true;
     }
-
-    // stop the animation
-    function stopAnimation(){
+    function stopAnimation(){ // stop the animation
         start.disabled = false;
         stop.disabled = true;
         clearInterval(interval);
@@ -32,14 +24,10 @@ window.onload = function() {
         animation.disabled = false;
         textArea.readOnly = false;
     }
-
-    // change the font size
-    function changeFontSize(){
+    function changeFontSize(){ // change the font size
         textArea.style.fontSize = fontsize.value;
     }
-
-    // increase/decrease the speed of animation 
-    function turboSpeed(){
+    function turboSpeed(){ // increase/decrease the speed of animation
         if(turbo.checked == true) {
             speed = 50;
         }
@@ -52,11 +40,9 @@ window.onload = function() {
             interval = setInterval(animationSingle, speed);
         }
     }
-
-    function displayFirstAnimationTextOnScreen(){
+    function displayFirstAnimationTextOnScreen(){ // display whole text of animation when an animation is selected
         textArea.innerHTML = ANIMATIONS[animation.value];
     }
-    
     var i;
     var length;
     var animationArray = null;
@@ -68,14 +54,9 @@ window.onload = function() {
     var fontsize = document.getElementById('fontsize');
     var turbo = document.getElementById('turbo');
     var textArea = document.getElementById('text-area');
-
     animation.onchange = displayFirstAnimationTextOnScreen;
-
     start.onclick = startAnimation;
     stop.onclick = stopAnimation;
-
     fontsize.onchange = changeFontSize;
-    
     turbo.onchange = turboSpeed;
-
 }
