@@ -60,4 +60,4 @@ window.onload = function() {
     stop.onclick = stopAnimation;
     fontsize.onchange = changeFontSize;
     turbo.onchange = turboSpeed;
-}
+};
