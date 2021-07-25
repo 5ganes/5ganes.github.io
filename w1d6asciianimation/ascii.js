@@ -12,6 +12,7 @@ window.onload = function() {
     function startAnimation(){
         start.disabled = true;
         stop.disabled = false;
+        textArea.readOnly = true;
         
         var animationText = ANIMATIONS[animation.value];
         animationArray = animationText.split("=====\n");
@@ -29,6 +30,7 @@ window.onload = function() {
         clearInterval(interval);
         interval = null;
         animation.disabled = false;
+        textArea.readOnly = false;
     }
 
     // change the font size
@@ -50,6 +52,10 @@ window.onload = function() {
             interval = setInterval(animationSingle, speed);
         }
     }
+
+    function displayFirstAnimationTextOnScreen(){
+        textArea.innerHTML = ANIMATIONS[animation.value];
+    }
     
     var i;
     var length;
@@ -62,6 +68,8 @@ window.onload = function() {
     var fontsize = document.getElementById('fontsize');
     var turbo = document.getElementById('turbo');
     var textArea = document.getElementById('text-area');
+
+    animation.onchange = displayFirstAnimationTextOnScreen;
 
     start.onclick = startAnimation;
     stop.onclick = stopAnimation;
