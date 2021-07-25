@@ -1,6 +1,6 @@
+import { ANIMATIONS } from './animations.js'; 
 window.onload = function() {
     'use strict';
-    import { ANIMATIONs } from './animations.js'; 
     function animationSingle(){ // actual animation function : using separate function
         if(i == length)
             i = 0;
