@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+        function shortest(string1, string2, string3) { // should return "z"
+            
+            // return first string if all strings have same length
+            if(string1.length == string2.length && string1.length == string3.length)
+                return string1;
+
+            if(string1.length < string2.length && string1.length < string3.length)
+                return string1;
+            else if(string2.length < string1.length && string2.length < string3.length)
+                return string2;
+            else
+                return string3;
+        }
+
+    </script>
+
+</head>
+<body>
+    
+    <style>
+        .container{
+            display: grid; height: 40vh;
+        }
+        .container div:first-child{
+            grid-row: 1 /span 2;
+            grid-column: 1;
+            background-color: #CCCCCC;
+        }
+        .container div:nth-child(2){
+            grid-column: 2 /span 2;
+            grid-row: 1;
+            background-color: #BBBBBB;
+        }
+        .container div:nth-child(3){
+            background-color: #EEEEEE;
+        }
+        .container div:last-child{
+            background-color: #CCCCCC;
+        }
+
+    </style>
+
+    <div class="container">
+        <div>Some</div>
+        <div>text</div>
+        <div>here</div>
+        <div>there</div>
+    </div>
+
+</body>
+</html>
