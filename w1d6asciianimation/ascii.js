@@ -1,4 +1,3 @@
-import { ANIMATIONS } from './animations.js'; 
 window.onload = function() {
     'use strict';
     function animationSingle(){ // actual animation function : using separate function
