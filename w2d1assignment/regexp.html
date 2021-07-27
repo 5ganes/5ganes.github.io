@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W2D7 - Regular Expressions</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="regexp.css">
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <form action="" method="POST" class="w-100 p-5" id="">
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" placeholder="Enter Email" class="form-control">
+                    <span class="blur">We'll never share your email address with anyone else.</span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="text" placeholder="Password" class="form-control" 
+                    pattern="(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z])[a-zA-Z0-9]{10,}" title="Atleast a number, small and capital, size 10 or more">
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" value="checked"> Check me out
+                </div>
+                
+                <div class="form-group">
+                    <label for="url">Website URL</label>
+                    <input type="text" placeholder="Enter Website URL" class="form-control" 
+                    pattern="https?://.*" title="Starts with http:// or https://">
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary">
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
+
