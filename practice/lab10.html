@@ -1,0 +1,101 @@
+<script>
+
+// var x = 5;
+// var y = test();
+// var b = { x: 4 };
+// var z = y.bind(b);
+// z();
+// function test() {
+//     console.log(this);
+//     console.log(x);
+//     var z = function() {
+//         var x = 3;
+//         console.log(this);
+//         console.log(this.x);
+//     }
+//     var x = 8;
+//     z();
+//     return z;
+// }
+
+// Window Object // comes from global window scope - this represents window object in this case inside test()
+
+// undefined     // value of x is undefined and comes from the scope of function test() - x is hoisted inside the function
+
+// Window Object // comes from global window scope - this represents window object in this case as well inside z()
+// 5             // in this case this represents window object and this.x first finds the x as global variable outside of   
+//               // the function which is 5
+
+// object : {  x : 4 }  // function y() which is inner function inside test() is bounded with object b so value of this 
+//                      // will be object b in this case
+// 4                    // value of this is object b and b.x is 4 in this case
+
+// const validateModule = (() => {
+//     let form = document.getElementById('myForm');
+//     const validateFirstName = () => {
+//         if(form.first.value =="")
+//             return false;
+//         return true;
+//     };
+//     const validateLastName = () => {
+//         if(form.last.value =="")
+//             return false;
+//         return true;
+//     };
+//     const validate = (){
+//         if(validateFirstName() && validateLastName())
+//             return true;
+//         return false;
+//     };
+//     return {
+//         validation: validate
+//     };
+// });
+// let validateForm = validateModule();
+// validateForm.validation();
+
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>W2D4 Q2</title>
+        <meta charset="utf8">
+    </head>
+    <body>
+        <form id="myForm" method="POST">
+            <input type="text" name="first" id="first" placeholder="First Name" /> <br />
+            <input type="text" name="last" id="last" placeholder="Last Name" /> <br />
+            <input type="submit" />
+        </form>
+    </body>
+</html>
+<script>
+const validateModule = () => {
+    let form = document.getElementById("myForm");
+    const validateFirstName = () => {
+        if(form.first.value === "")
+            return false;
+        return true;
+    };
+    const validateLastName = () => {
+        if(form.last.value === "")
+            return false;
+        return true;
+    };
+    const validate = () => {
+        if(validateFirstName() && validateLastName())
+            return true;
+        console.log('sdf');
+        return false;
+    };
+    return {
+        validation: validate
+    };
+};
+window.onload = function() {
+    let validateForm = validateModule();
+    document.getElementById("myForm").onsubmit = validateForm.validation;
+}
+</script>
+

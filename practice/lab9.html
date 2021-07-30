@@ -1,0 +1,110 @@
+<script>
+
+    // Problem3 :
+    // var count = (function(){   // const count
+    //     var counter = 0;
+    //     const add = function(inc){
+    //         return counter += inc;
+    //     };
+    //     const make_adder = (inc) => {
+    //         return add.bind(null, inc);
+    //     };
+    //     const reset = () => {
+    //         counter = 0;
+    //     };
+    //     return {
+    //         addCounter: add,
+    //         resetCounter: reset,
+    //         makeAdder: make_adder
+    //     }
+    // })();
+
+    // // count.addCounter(1);
+    // // count.addCounter(2);
+    // var add7 = count.makeAdder(7);
+    // console.log(add7());
+    // console.log(add7());
+    // console.log(add7());
+
+    // var add7 = count.makeAdder(7);
+    // console.log(add7());
+    // console.log(add7());
+    // console.log(add7());
+    // count.addCounter(3);
+    // console.log(count.counterValue());
+    // count.resetCounter();
+    // console.log(count.counterValue());
+    // count.addCounter(4);
+    // console.log(count.counterValue());
+
+
+    // // Problem2 :
+    // variable counter is a free variable used inside add() closure function
+    // Free Variable : the term free variable refers to a variablea used in a function that is neither local variable nor a parameter to that function. Function just uses the free variables which are defined anywhere outside of that function
+
+    // problem4 
+    // simple modification to the JavaScript file that can remove all the names from the Global namespace can be the use of module pattern which makes every variable and method as locals bounded inside an anonymous function 
+
+    // Problem5
+    const empModule = (() => {
+        let empObj = {
+
+        };
+        const getName = () => {
+            return empObj.name;
+        };
+        const getAge = () => {
+            return empObj.age;
+        };
+        const getSalary = () => {
+            return empObj.salary;
+        };
+        const setName = (name) => {
+            empObj.name = name;
+        };
+        const setAge = (age) => {
+            empObj.age = age;
+        };
+        const setSalary = (salary) => {
+            empObj.salary = salary;
+        };
+        const  increaseSalary = (percentage) => {
+            empObj.salary += (percentage/100) * empObj.salary; 
+        }
+        const incrementAge = () => {
+            empObj.age++;
+        }
+
+        return {
+            setName: setName,
+            setAge: setAge,
+            setSalary: setSalary,
+            increaseSalary: increaseSalary,
+            incrementAge: incrementAge,
+            getEmployee: empObj
+        };
+    });
+
+    empModule.setAddress = (address) => {
+        empModule.empObj.address = address;
+    };
+    empModule.getAddress = ()=>{
+        return empModule.empObj.address;
+    };
+
+    
+    let emp1 = empModule();
+    emp1.setName("Ganesh Khatri");
+    emp1.setAge(32);
+    emp1.setSalary(7000);
+    emp1.increaseSalary(20);
+    emp1.incrementAge();
+    console.log("Employee 1 : ");
+    console.log(emp1.getEmployee);
+
+    emp1.setAddress("Fairfield");
+    // console.log("Employee 1 after setting address: ");
+    // console.log(emp1.getEmployee);
+
+
+</script>

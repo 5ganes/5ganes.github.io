@@ -1,0 +1,15 @@
+Problem 1 Output :
+undefined // variable x is hoisted since it has been declared and assignment in 
+          // global scope as well as local(function scope) : it will be considered as undefined
+
+8         // even though a is defined as global scope, 8 is passed as a in function c()
+          // so a will have local scope inside this function
+
+8         // local variable b inside function f is assigned with value of local variable a(=8)
+          // local scope
+
+9         // value of local variable b inside function c which is 9
+
+10        // value of global scope variable b outside of all the functions which is 10
+
+1         // value of global scope variable a outside of all the functions which is 1

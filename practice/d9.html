@@ -1,0 +1,26 @@
+<script>
+
+    var x = 5;
+    var y = 7;
+    function a() {
+        function b() {
+            console.log(`1: x=${x} y=${y}`);
+            y = 10;
+            return function c(y) {
+                console.log(`2: x=${x} y=${y}`);
+            }
+        }
+        console.log(`3: x=${x} y=${y}`)
+        var z = b()
+        var x = 10;
+        z(20);
+    }
+    console.log(`4: x=${x} y=${y}`);
+    a();
+    console.log(`5: x=${x} y=${y}`);
+
+</script>
+<!-- // x is redefined inside function a() as well at second last statement so it will be hoisted inside function a()
+and inside function a() value of x will be undefined until it is assigned a value at second last sttement -->
+
+again, when statement 'var z = b()' is executed, it calls function b() where it is displaying value of x which is undefined because it is hoisted inside function b and is not assignment a value yet.

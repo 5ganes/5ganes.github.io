@@ -1,0 +1,229 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    </script>
+</head>
+<body>
+    <form action="" method="POST">
+        <input type="text" pattern="(\+1 ?)?(\d{3}) ?(\d{3}) ?(\d{4})" title="abc">
+        
+    </form>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>W2D2 Quiz</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+        // initialize mocha
+        mocha.setup('bdd');
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+
+    </script>
+
+    <script>
+        // write your code for the function longestNoSapce() here
+        // remember it can take any amount of strings!
+        function longestNoSpace(){
+            // console.log(arguments);
+            var a = arguments.
+                filter(s => s.indexOf(" ") != null)
+                map(s => s.length >)
+                .
+            console.log(arguments[0].indexOf(" "));
+        }
+
+    </script>
+    <script src="code.js"></script>
+    <script>
+        describe("longestNoSpace", function () {
+            it("returns 0 if given zero parameters", () => {
+                assert.equal(longestNoSpace(), 0);
+            });
+            it("returns 0 if given a single string that contains a space", () => {
+                assert.equal(longestNoSpace("a test"), 0);
+            })
+            it("returns 0 if given only strings that contains spaces", () => {
+                assert.equal(longestNoSpace("this is","a test"), 0);
+            });
+            it("returns the length of the string if given a single string without a space", () => {
+                assert.equal(longestNoSpace("hello"), 5);
+            });
+            it("returns the length of the longest string if given multiple strings without spaces", () => {
+                assert.equal(longestNoSpace("hello", "world!"), 6);
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id="mocha"></div>
+    <script>
+        mocha.run();
+
+    </script>
+</body>
+
+</html> -->
+
+<script>
+    
+    // var x = 10;
+    // console.log(x);
+    // var x = 30;
+    
+    // function main() {
+    //     console.log("x1: " + x);
+    //     x = 20;
+    //     if (x > 0) {
+    //         // var x = 30;
+    //         console.log("x2: " + x);
+    //     }
+    //     // var x = 40;
+    //     var f = function(x) { 
+    //         console.log("x3: " + x); 
+    //     }
+    //     f(50);
+    // }
+    // main();
+    // x1 is: 10, x2 is: 20, x3 is: 30, x4 is: 30, x5 is: 50, x6 is: 40, x7 is: 10
+    // var x = 10;
+    // function main(){
+    //     console.log("x1 is:" + x);
+    //     x = 20;
+    //     console.log("x2 is:" + x);
+    //     if(x>0){
+    //         var x = 30;
+    //         console.log("x3 is:" + x);
+    //     }
+    //     console.log("x4 is:" + x);
+    //     var x = 40;
+    //     var f = function(x){
+    //         console.log("x5 is:" + x);
+    //     };
+    //     f(50);
+    //     console.log("x6 is:" + x);
+    // }
+    // main();
+    // console.log("x7 is:" + x);
+
+    // var x = 10;
+    // function fun(){
+    //     console.log(x);
+    //     // var x = 20;
+    // }
+    // fun();
+    // var x = 30;
+
+    // const funcs = [];
+    // for (let i = 0; i < 5; i++) {
+    //     funcs[i] = function() {
+    //         return i;
+    //     };
+    // }
+
+    // console.log(funcs[0]());
+    // console.log(funcs[1]());
+    // console.log(funcs[2]());
+    // console.log(funcs[3]());
+    // console.log(funcs[4]());
+
+    // x = 1;
+    // var a = 5;
+    // var b = 10;
+    // var c = function(a, b, c){
+    //     console.log(x);
+    //     console.log(a);
+    //     var f = function(a, b, c){
+    //         b = a;
+    //         console.log(b);
+    //         b = c;
+    //         var x = 5;
+    //     }
+    //     f(a, b, c);
+    //     console.log(b);
+    //     var x = 10;
+    // }
+    // c(8, 9, 10);
+    // console.log(b);
+    // console.log(x);
+
+    // let calc = function(){
+    //     var number = 5;
+    //     return number * 2;
+    // }
+    // console.log(calc());
+
+    // scope A
+    // var b = 6;
+    // function xFunc(){
+    //     // scope B
+    //     function yFunc(){
+    //         // scope C
+    //         console.log(b);
+    //     }
+    //     yFunc();
+    //     // console.log(c + 10);
+    // }
+    // xFunc();
+    // // console.log(b + 1);
+
+
+    // var x = 9;
+    // function myFunction(){
+    //     return x * x;
+    // }
+    // console.log(myFunction());
+    // x = 5;
+    // console.log(myFunction());
+
+    // var foo = 1;
+    // function bar(){
+    //     if(!foo)
+    //         var foo = 10;
+    //     alert(foo);
+    // }
+    // bar();
+
+    // 10 : because even foo is declared as golbal scope variable at the start, it has been again declared inside the function bar(), it will be hoisted and inside the function bar(), value of foo will be undefined, so if(!foo will be true)
+
+
+
+</script>
+
+<script>
+    window.onload = () => {
+        document.getElementById('re-form').onsubmit = () => {
+            let password = document.getElementById("password").value;
+            let patt = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\W])[a-zA-Z0-9\W]{10,}/;
+            if(password.match(patt)){
+                console.log('matched');
+                return false; // return true if you want to submit the form
+            }
+            else{
+                console.log('did not match');
+                return false;
+            }
+        };
+    };
+</script>
+<form action="" method="POST" id="re-form">
+    <input id="password" type="text">
+    <input type="submit" value="Submit">
+</form>
