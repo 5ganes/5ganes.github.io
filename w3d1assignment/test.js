@@ -197,7 +197,6 @@
                 assert.equal(4, bank.addCheckingAccount(12000));
             });
     });
-
     describe("Bank : closeAccount", function () {
         it("takes an account number and removes an object of with that account number",
             function () {
@@ -210,7 +209,6 @@
                 assert.deepEqual([{_number: 10, _balance:0}, {_number:12, _balance: 0, _overDraftLimit:10000}], bank.accountList);
             });
     });
-
     describe("Bank : accountReport", function () {
         it("takes no arguments and returns a string of list of all the accounts",
             function () {
@@ -223,6 +221,14 @@
                 assert.equal("Account 13: balance 0\nAccount No: 14, Balance: 0, Interest: 10\nAccount No: 15, Balance: 0, OverDraftAmount: 10000", bank.accountReport());
             });
     });
+
+// probmem 2 d) tests end ********************************************************************************
+
+
+
+
+
+// probmem 2 e) tests ********************************************************************************
 
     describe("Bank : endOfMonth", function () {
         it("takes no arguments and returns a string of output of endOfMonth() function from all the objects",
@@ -238,5 +244,4 @@
             });
     });
 
-
-// probmem 2 d) tests end ********************************************************************************
+// probmem 2 e) tests end ********************************************************************************
