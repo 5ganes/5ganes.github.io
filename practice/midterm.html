@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            color: yellow; background-color: green;
+        }
+        .things, em{
+            color: red;
+        }
+        .some{
+            background-color: blue; color: purple;
+        }   
+        h1{
+            background-color: orange;
+        }
+        span, dl{
+            color: brown;
+        }
+        #there{
+            background-color: white;
+        }
+        dt{
+            background-color: pink;
+        }
+        dl dd{
+            color: black;
+        }
+    </style>
+    <script>
+        var a = 12;
+        var b = 8;
+        var z = x(b);
+        z(a, b);
+        function x(a){
+            console.log(`1: ${this} ${a} ${b}`);
+            var b = function(b){
+                if(a <= 10)
+                    a = a * 2;
+                console.log(`2: ${this} ${a} ${b}`);
+            };
+            console.log(`3: ${this} ${a} ${b}`);
+            return b.bind({a:5, b:20});
+        }
+    </script>
+</head>
+<body>
+    <h1 class="some">First</h1>
+    <dl>
+        <dt class="things">
+            <span>Second</span>
+        </dt>
+        <dd>Third</dd>
+        <dt id="there">Fourth</dt>
+        <dd><em>Fifth</em></dd>
+    </dl>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid black; margin: 2px;
+        }
+        #b{
+            position: absolute; bottom: 0; right: 0;
+        }
+        #d{
+            position: fixed; bottom: 0; right: 0; width: 200px; height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="a">A
+        <div id="b">B
+            <div id="c">C</div>
+        </div>
+    </div>
+    <div id="d">D
+        <div id="e">E</div>
+    </div>
+</body>
+</html> -->

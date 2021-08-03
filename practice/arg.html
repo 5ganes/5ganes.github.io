@@ -1,0 +1,19 @@
+<script>
+
+    // let a = [1, 2, 3];
+    // let b = [4, 5];
+    // let c = "Ganesh";
+    // let d = [ ...a, c, ...b ];
+    // console.log(d);
+
+    // const address = [221, "4th St", "Fairfield"];
+    // [houseNo, , city] = address;
+    // console.log(houseNo, city);
+
+    let arr = ["Ganesh Khatri", "RamPrasad", "Kanchanpur", "Bestie Friend", "Alladin"];
+    let res = arr
+                .filter(s => s.indexOf(" ") < 0)
+                .reduce((acc, currEl) => currEl.length > acc.length ? currEl : acc)
+    console.log(res);
+
+</script>
