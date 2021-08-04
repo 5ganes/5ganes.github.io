@@ -6,7 +6,8 @@ $(() => {
     start.click(() => {
         let start = true;
         $('#status').text('Move mouse to End in order to win the game.'); // .html() can also be used
-        boundaries.hasClass('youlose') ? boundaries.removeClass('youlose') : '';
+        if(boundaries.hasClass('youlose')) 
+            boundaries.removeClass('youlose');
         boundaries.mouseover(() => start ? loseFunction() : '');
         end.mouseover(() => {
             if(start){
@@ -18,7 +19,7 @@ $(() => {
             start = false;
             boundaries.addClass('youlose');
             $('#status').html('Sorry ! You have lost the game.');
-        }
+        };
         $('#maze').mouseleave(() => start ? loseFunction(): '');   
     });
 });
