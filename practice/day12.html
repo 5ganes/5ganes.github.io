@@ -1,0 +1,33 @@
+<script>
+
+    // given class diagram is showing all properties and methods as public(+), to make properties private, 
+    // we can use this._propertyName everywhere and to get values of private properties of Computer class in Laptop class, we can call getters of those properties like commented getter of ram below
+    class Computer {
+        constructor(ram, cpu, storage) {
+            this.ram = ram;
+            this.cpu = cpu;
+            this.storage = storage;
+        }
+        // getRam() {
+        //     return this._ram;
+        // }
+        runProgram(programName) {
+            console.log("running: " + programName);
+        }
+    }
+
+    class Laptop extends Computer{
+        constructor(ram, cpu, storage, battery) {
+            super(ram, cpu, storage);
+            this.battery = battery;
+        }
+        carryAround() {
+            console.log("carrying laptop:  cpu - " + this.cpu +" ram - " + this.ram + " storage - " + this.storage + " battery - " + this.battery);
+        }
+    }
+
+    let lap = new Laptop(8, "Intel", 512, "6 hrs");
+    lap.runProgram("MS Paint");
+    lap.carryAround();
+
+</script>
