@@ -1,3 +1,4 @@
+"use strict";
 $(() => {
     let start = $('#start');
     let end = $('#end');
