@@ -105,3 +105,8 @@ neighboring elements.  Necessary to avoid giving ids to the boundary divs
     height: 150px;
     width: 98px;
 }
+
+/* my css code for jslint link */
+.jslint{
+    position: fixed; right: 0; bottom: 0;
+}
