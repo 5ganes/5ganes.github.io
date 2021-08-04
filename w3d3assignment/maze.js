@@ -1,5 +1,5 @@
-'use strict';
 $(() => {
+    'use strict';
     let start = $('#start');
     let end = $('#end');
     let boundaries = $('.boundary');
