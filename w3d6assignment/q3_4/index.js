@@ -36,9 +36,9 @@ app.get('/cartList', (req, res) => {
     });
 });
 
-app.post('/addToCart', (req, res) => {
-    // code for adding product in cart list
-});
+// app.post('/addToCart', (req, res) => {
+//     // code for adding product in cart list
+// });
 
 app.listen(3000, () => {
     console.log("Server running at port 3000.");
