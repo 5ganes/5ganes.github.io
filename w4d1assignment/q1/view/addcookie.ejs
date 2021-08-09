@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Add a Cookie</title>
+</head>
+
+<body class="m-4">
+
+    <div class="container col-8">
+        <h2>Add a Cookie</h2>
+        <form method="post" action="/">
+            <div class="form-group">
+                <label>Cookie Key : </label>
+                <input class="form-control" type="text" name="key">
+            </div>
+            <div class="form-group">
+                <label>Cookie Value : </label>
+                <input class="form-control" type="text" name="value">
+            </div>
+            <div class="form-group>">
+                <input type="submit" name="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    <hr>
+
+    <div class="container col-8">
+        <h3>Cookie List</h3>
+        <table class="table table-responsive">
+
+            <tr>
+                <th>Cookie Name</th>
+                <th>Cookie Value</th>
+            </tr>
+            <% for(cookie in cookieList) {%>
+                <tr>
+                    <td>
+                        <%=cookie%>
+                    </td>
+                    <td>
+                        <%=cookieList[cookie]%>
+                    </td>
+                </tr>
+                <% }%>
+
+        </table>
+    </div>
+
+</body>
+
+</html>
