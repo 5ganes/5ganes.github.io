@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Design - problem 1</title>
+
+    <script>
+
+        $(() => {
+            $('.button').submit(function () {
+                let button = this;
+                $.get({
+                    url: '/computers/' + button.attr('id'),
+                    data: '',
+                    dataType: "application/json; charset=utf-8"
+                }).done((res) => {
+                    console.log(res); // display json data into console.
+                }).fail(() => {
+                    console.log('can not retrieve data from server');
+                });
+            });
+        });
+
+    </script>
+
+    <style>
+        .container {
+            width: 30%;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        section div:first-child {
+            float: right;
+        }
+
+        .main {
+            clear: both;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <h2>Computers</h2>
+        </header>
+        <section>
+            <div>
+                <input type="button" id="1" class="button" value="1">
+                <input type="button" id="2" class="button" value="2">
+                <input type="button" id="3" class="button" value="3">
+            </div>
+            <div class="main">
+                <div class="left">
+                    <p>CUP Speed: </p>
+                    <p>RAM Amount: </p>
+                    <p>Storage space: </p>
+                    <p>Price: </p>
+                </div>
+                <div class="right">
+                    <p>Click a button to load</p>
+                    <p>Click a button to load</p>
+                    <p>Click a button to load</p>
+                    <p>Click a button to load</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>

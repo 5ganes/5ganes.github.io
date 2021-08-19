@@ -1,0 +1,36 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    $(() => {
+        $('#first').change(function () {
+            $.get('/stateProvince', {
+                data: { country: $(this).val() },
+                dataType: 'application/json; charset=utf-8'
+            }).done((res) => {
+                let options = JSON.parse(res);
+                console.log(options);
+                $('#second').text("");
+                for (op of options) {
+                    $('#second').append($('<option>', {
+                        value: op.code,
+                        text: op.name
+                    }));
+                }
+            });
+        });
+    });
+</script>
+<div>
+    Country :
+    <select id="first">
+        <option value="select">Select a Country</option>
+        <option value="Nepal">Nepal</option>
+        <option value="India">India</option>
+    </select><br><br>
+
+    State/Province :
+    <select id="second">
+        <option value="select">Select contry first</option>
+    </select>
+
+</div>
